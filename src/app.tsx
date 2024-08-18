@@ -1,5 +1,8 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { Container } from './App.styled'
+import { GlobalStyle } from './GlobalStyle'
+import { ToDoForm, ToDoList } from './components'
 
 const container = document.getElementById('root')
 
@@ -19,6 +22,10 @@ const root = createRoot(container)
 
 root.render(
   <StrictMode>
-    <h1>hello from react</h1>
+    <GlobalStyle />
+    <Container>
+      <ToDoForm />
+      <ToDoList />
+    </Container>
   </StrictMode>
 )
